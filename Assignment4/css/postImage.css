@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0S;
+    box-sizing: border-box;
+}
+
+body{
+    background-position: center;
+    background-size: cover;
+    font-family: sans-serif;
+    margin-top: 200px;
+}
+.title{
+    width: 800px;
+    background-color: rgb(0, 0, 0, 6);
+    margin: auto;
+    color: #ffffff;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.container{
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 800px;
+    margin: auto;
+}
+
+form{
+    padding: 30px;
+}
+
+.name{
+    margin-left: 25px;
+    margin-top: 30px;
+    width: 125px;
+    font-size: 18px;
+    font-weight: 700px;
+}
+
+input{
+   /* position:relative;*/
+    left: 80px;
+    top: -20px;
+    width:  480px;
+    line-height: 25px;
+    border-radius: 6px;
+    padding: 0 30px;
+    font-size: 16px;
+}
+body{
+
+  
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    
+    padding-left: 80px;
+    padding-right: 80px;
+
+    text-align: left;
+    margin: 0 auto;
+    width: 50%;
+    border: 4px;
+   
+}
+
+body .header .h1{
+    font-size: large;
+}
+
+.title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+label{
+
+    top: -15px;  
+    left: 80px;
+    float: left;
+    width:300px;
+    padding-right: 24px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(36, 9, 20);
+    bottom: -70px;
+}
+
+
+  
+input{ 
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
+    width:100%;
+    padding: 0 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+label .input[type='image']{
+    margin-top: 2rem;
+}

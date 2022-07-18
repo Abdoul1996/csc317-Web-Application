@@ -1,0 +1,488 @@
+/*styling for all files*/
+body{
+    background-image: url("https://www.htmlcsscolor.com/preview/gallery/CDCDCD.png");
+    background-color: #cccccc;
+    padding: 30px;
+    /*overflow: hidden;*/
+}
+
+/*styling for all headers*/
+header{
+    border-radius: .25pt;
+    border: .6pt solid black;
+    box-shadow: 2px 2px 2px black(131, 30, 30, 0.933);
+    margin: 0 0 5px 0;
+
+    text-align: center;
+}
+
+/*postimage.html*/
+.grid-container{
+    /*
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: navy;
+    */
+    padding: 10px;
+    text-align: center;
+    color: navy;
+    font-family: Georgia;
+} 
+
+/*registration.html*/
+.white-box{
+    /*background-color: white;
+    color: black;*/
+
+    text-align: center;
+    font-family: Courier New;
+}
+
+.agecheck .tosandprivacy{
+    text-align: center;
+}
+
+.error-container{
+    /*background-color: white;*/
+    border: 3px solid #9aced9;
+    width: 700px;
+    height: 60px;
+    right: 345px;
+    position: absolute;
+    
+}
+/* end of reg*/
+
+.logging-in {
+    text-align: center;
+}
+
+#title{
+    font-size: 30px;
+    font-family: Courier New;
+}
+
+#author{
+    font-size: 22px;
+    font-family: Courier New;
+}
+
+#time{
+    font-size: 15px;
+    font-family: Courier New;
+}
+
+#image{
+    font-size: 15px;
+    font-family: Courier New;
+}
+
+/*header for login.html*/
+.loginheader{
+    color: black;
+    font-family: Tahoma;
+}
+
+/*styling for all input fields*/
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 2px;
+    margin-bottom: 5px;
+  }
+  
+  /*styling for the inputs ( user ) for reg*/
+  input[type="text"]{
+    width: 300px;
+  }
+
+  /*styling for the inputs ( email ) for reg*/
+  input[type="email"]{
+    width: 300px;
+  }
+
+  /*styling for the inputs ( passwords ) for reg*/
+  input[type="password"]{
+    width: 300px;
+  }
+
+  input[type="file"]{
+    width: 300px;
+  }
+
+  /* Style the submit buttons [ all ]*/
+  input[type="submit"] {
+    background-color: purple;
+    color: white;
+    width: 150px;
+  }
+
+  /*for the cancel button in login*/
+  input[type="reset"] {
+    background-color: navy;
+    color: white;
+    width: 150px;
+  }
+  
+  /* Style the checkbox [ all ]*/
+  input[type="checkbox"] {
+    zoom: 1.5;
+  }
+  
+  /* Style the container for inputs */
+  .regcontainer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+    border: 3px solid navy;
+  }
+
+    #banner{
+        position: fixed;
+        left: 0;
+        top: -15px;
+        width: 100%;
+        height: 50px;
+        font-size: 15px;
+        background-color: navy;
+        color: white;
+        text-align: center;
+    }
+
+    /*home.html nav bar*/
+    .navbar{
+        text-align: right;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        /*overflow: hidden;*/
+        padding: 0;
+        font-size: 20px;
+    }
+
+    li{
+        float: left;
+    }
+
+    li a{
+        text-decoration: none;
+        display: block;
+        padding: 8px;
+        color: purple;
+        font-weight: bold;
+    }
+
+    li a:hover {
+        background-color: whitesmoke;
+    }
+
+    /*search bar + button*/
+    #searchbar{
+        display: inline;
+        margin-right: 10px;
+    }
+
+    #search-text{
+        width: 920px;
+    }
+
+    #search-btn{
+        height: 35px;
+        width: 90px;
+        color: purple;
+    }
+
+    #items-count{
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 30px;
+        color: navy;
+    }
+
+    div {
+        padding: 0;
+
+        list-style-type: none;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        
+    }
+
+    /* home.html list of photos + descrips*/
+    #container {
+        padding: 10px;
+        flex-wrap: wrap;
+        /*display: inline-flex;*/
+        /*overflow: hidden;*/
+        display: flex;
+        list-style-type: none;
+        width: 1300px;
+     
+    }
+    
+    #container > div {
+        width: 200px;
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+
+    /*img { 
+        max-width: 200px;
+    }*/
+
+    title {
+        max-width: 200px;
+    }
+
+    @keyframes fadeOut {
+        0% {opacity: 1;}
+        100% {opacity: 0;}
+    }
+
+    #footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        font-size: 15px;
+        background-color: purple;
+        color: white;
+        text-align: center;
+    }
+
+    #email-link {
+        color: navy;
+    }
+
+    /*these are for the flash msg*/
+    #flash-message{
+        position: fixed;
+        left: 50%;
+        top: 15%;
+        transform: translate(-50%, 0);
+        background-color: purple;
+        border-radius: 10px;
+        width: 275px;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        z-index: 9999; /*alw makes sure it's shown on the top of everything in browser*/
+    }
+
+    #flas-message div{
+        text-align: center;
+    }
+
+    #main-container {
+        padding: 10px;
+        /*display: flex; don't need this, it'll make everything go in columns*/
+        list-style-type: none;
+        width: 1400px;
+    }
+
+    /*the new home page + card posts*/
+    #main-content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /*start of the card*/
+    .card {
+        display: grid;
+        /*grid-template-rows: 90px 250px; this was messing me up*/
+        grid-template-columns: auto;
+        gap: 1%; /**/
+        border: 0.0625rem solid #cccccc;
+        border-radius: 0.25rem;
+        box-shadow: 0 2px 2px #dfdede;
+        padding: 10px;
+        background-color: #9aced9;
+    }
+    
+    .card-image {
+        grid-area: 3 / 1 / 2 / 4; /*gave me hell*/
+    }
+    
+    div[class=card] > img {
+        height: 200px;
+        width: 200px;
+        
+        margin:auto;     
+    }
+    
+    .card-title {
+        color: white;
+        font-size: 30;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: .1rem;
+        margin-top: 0;
+        padding-top: .1rem;
+    }
+    
+    .card-body {
+        grid-area: 3 / 1 / span 2 / span 3;
+        padding: 0.50rem;
+        background-color: navy;
+        border-radius: 0 0 0.4rem 0.4rem;
+        text-align: center;
+        height: 130px;
+    }
+    
+    div[class=card-body] > a[class=card-button] {
+        text-decoration: none;
+    }
+    
+    .card-text {
+        color: white;
+        font-size: 20;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    
+    .anchor-buttons {
+        cursor: pointer;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        line-height: 2rem;
+        border: 0.0625rem solid white;
+        border-radius: .25rem;
+        font-weight: bold;
+        font-size: larger;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        padding-top: 3px;
+    }
+    /*end of the card*/
+  
+    /*post details*/
+    .form-label{
+        color:purple;
+    }
+
+    div[id^=post-]{
+        color: navy;
+    }
+
+    #post-title{
+        color: purple;
+        font-size: 25px;
+    }
+
+    #post-description{
+        font-size: 20px;
+    }
+
+    #post-image{
+        height: 400px;
+        width: 400px;
+    }
+
+    /*comments*/
+    #post-container{
+        grid-area: content;
+        padding-top: .35rem;
+        padding-bottom: .35rem;
+        padding-right: 130px;
+        display: grid;
+        grid-gap: .2rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "photoinfo comments";
+    }
+
+    #photo-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        grid-area: photoinfo;
+    }
+
+    #comment-container{
+        display: grid;
+        grid-area: comments;
+        grid-template-rows: auto 75px;
+        grid-template-columns: 1fr;
+        gap: .2rem;
+        grid-template-areas:
+        "messages"
+        "comment-box";
+        max-height: 80vh;
+    }
+
+    #comment-box{
+        /*position: fixed;*/
+        left: 46.5%;
+        bottom: 5%;
+    }
+
+    #type-comment{
+        width: 525px;
+    }
+
+    #pushtopost{
+        height: 35px;
+        width: 100px;
+        color: navy;
+    }
+
+    #messages{
+        grid-area: messages;
+        overflow-y: auto;
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        scroll-behavior: smooth;
+        border: 1px solid #cccccc;
+        box-shadow: -2px 2px 4px 4px #e0e0e0;
+        border-radius: .35rem;
+
+        /*this is for the scrolling box*/
+        height: 500px;
+        overflow: scroll;
+    }
+
+    div[id^=message-] {
+        display: grid;
+        grid-template-rows: .3fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: .2em;
+        padding: .25rem;
+        margin: .2rem;
+        font-size: 1rem;
+        color: navy;
+        border: .0625rem solid #ced4da;
+        border-radius: .25rem;
+        grid-template-areas: 
+        "author created"
+        "comment comment";
+    }
+
+    .author-text{
+        grid-area: author;
+        justify-self: start;
+        color: purple;
+    }
+
+    .comment-text{
+        grid-area: comment;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 60px;
+        min-height: 60px;
+    }
+
+    .date-posted{
+        grid-area: created;
+        justify-self: end;
+    }
+    /*end of comments*/
