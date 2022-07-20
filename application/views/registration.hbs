@@ -1,12 +1,8 @@
  <div class="White-box">
-        <div>
-         <!-- <h1 id="regform">
-              Registration Form
-            </h1>-->
-        </div>
         <br>
         <div class="regcontainer">
-                <form action="/users/register" enctype="application/x-www-form-urlencoded" id="regForm" onsubmit="event.preventDefault(); myValidation()">
+                <form  method="POST" action="/users/register" enctype="application/x-www-form-urlencoded" id="regForm"
+                 onsubmit="event.preventDefault(); myValidation()">
                     <h1 id="regform">
                         Register Now!
                     </h1>
@@ -23,12 +19,13 @@
                     <label for="pwdConfirm"></label>
                     <input type="password" id="confirmPassword" name="confirmPaaword" placeholder="Confirm Password"required/><br>
 
-                    <input type="checkbox" onclick="myFunction()">Show Password<br>
+                    <input type="checkbox" onclick=myFunction() >Show Password<br>
                 
                     <input type="checkbox" id="agecheck" name="agecheck" required> I am 13+ years of age</label><br>
                     <input type="checkbox" id="tosandprivacy" name="tosandprivacy" required> I accept all <a href="TOS">Terms of Service</a> and <a href="Privacy Rules"> Privacy Rules.</a></label><br><br />
-        
-                    <input type="submit" value="Submit">
+                    
+                    <input type="Reset">
+                    <input type="submit">
                 </form>
             </div>
            <br>
