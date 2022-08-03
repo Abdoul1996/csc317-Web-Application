@@ -3,14 +3,16 @@
         <ul class="navbar">
             <br>
             <li><a href="/">Home</a></li>
-            <li><a href="/registration">Registration</a></li>
-            <li><a href="/postimage">Post Image</a></li>
-
-            {{#if logged}}
-            <li><a id="logout-button" href="">Log out</a></li>
-            {{else}}
-            <li><a href="/login">Login</a></li>
-            {{/if}}
+            <li><a href="/registration"
+               >Registration</a></li>
+            <li><a href="/postimage"
+              >Post</a></li>
+           
+           {{#if logged}}
+           <li><a id="logout-button" >Log out</a></li>
+           {{else}}
+           <li><a href="/login">Login</a></li>
+           {{/if}}
         </ul>
 
         <input type="search-text" id="search-text" name="search-text" placeholder="search">
