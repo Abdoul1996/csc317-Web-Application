@@ -77,3 +77,4 @@ let searchButton = document.getElementById('search-btn');
 if (searchButton) {
     searchButton.onclick = executeSearch;
 }
+

@@ -1,0 +1,50 @@
+ <div id="post-container">
+    <div id="photo-container">
+        <h1 id="post-title">{{currentPost.title}}</h1>
+        <div id="post-description" class="info-tags">{{currentPost.description}}</div>
+        <img id="post-image" class="info-tags" src="/{{currentPost.photopath" alt="There should be a photo here">
+
+        <div id="post-info">
+            <p><span class="form-label">POSTED BY:</span><span id="post-author">{{currentPost.username}}</p>
+            <p><span class="form-label">POSTED AT:</span><SPan class="post-date">{{ formatDate currentPost.createdAt</p>
+        </div>
+    </div>
+
+    <div id="comment-container">
+        <div id="messages">
+            {{#reach currentPost.comments}}
+            {{> comment this}}
+        
+    </div>
+
+    <div id="comment-box">
+        <input type="text-comment" id="type-comment" name="type-comment" placeholder="Type comment here...">
+        <button id="pushtopost">COMMENT</button>
+    </div>
+ </div>
+ </div>
+ 
+ 
+
+   
+
+
+  <!--<body>
+    <form>
+        <section id="title">
+            Post Title
+        </section>
+        <br>
+        <section id="author">
+            Post Author
+        </section>
+        
+        <section id="time">
+            Post Creation Time
+        </section>
+
+        <section id="image">
+            Post Image
+        </section>
+</body>
+</html>-->

@@ -269,8 +269,8 @@ input {
         position: fixed;
         left: 50%;
         top: 15%;
-        transform: translate(-50%, 0);
-        background-color: purple;
+        transform: translateX(-50%, 0);
+        background-color: plum;
         border-radius: 10px;
         width: 275px;
         color: #ffffff;

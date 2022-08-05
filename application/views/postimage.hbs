@@ -1,19 +1,31 @@
 <div class="grid-container">
         <header>
-            <h1 id="postimageheader">Post Image Form</h1>
+            <h1 id="postimageheader">Post  Image </h1>
         </header>
 
-        <form id="post-image-page" class="form-grid-postimage" method="POST" enctype="multipart/form-data" action="/posts/createPosy">
+        <form id="post-image-page" class="form-grid-postimage" 
+        method="POST" 
+        enctype="multipart/form-data" 
+        action='/posts/createPost'>
             <br>
             <label class="titlein"></label>
-            <input type="text" name="title" placeholder="Post Title" required><br>
+            <input type="text" 
+            name="title" 
+            placeholder="Post Title" 
+            required><br>
             
 
             <label class="descriptionin"></label>
-            <input type="text" name="descriptor" placeholder="Post Description" required><br>
+            <input type="text" 
+            name="description" 
+            placeholder="Post Description" 
+            required><br>
                 
             <label  class="imagein">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input type="file" accept="image/*" name="uploadImg" required><br>
+            <input type="file"
+             accept="image/*" 
+             name="uploadImg" 
+             required><br>
 
             <label class="acceptancein">
                 <input type="checkbox" name="acceptance" required> Acceptance Use Policy

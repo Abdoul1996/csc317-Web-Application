@@ -1,0 +1,11 @@
+<div id="flash-message">
+    
+    {{#if message.error}}
+    <div class="alert alert-danger">{{message.error}}</div>
+    {{else if message.info}}
+    <div class="alert alert-info">{{message.info}}</div>
+    {{else }}
+
+    <div class="alert alert-success"> {{message.success}}</div>
+    {{/if}}
+</div>

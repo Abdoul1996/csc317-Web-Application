@@ -16,7 +16,11 @@ router.post('/registration', (req, res, next) => {
   if(results && results.length==0){
     return db.query('select * from users where email=?;',[email])
   }else{
-    res.redirect('/registration')
+    req.flash("error", "Username already exist!");
+      req.session.save(err =>{
+        if(err) next(err);
+        res.redirect("/registration");
+      });
   }
  })
 
@@ -24,7 +28,11 @@ router.post('/registration', (req, res, next) => {
   if(results && results.length == 0){
     return bcrypt.hash(password, 1);
   }else{
-    res.redirect('/registration');
+    req.flash("error", "Email already exist!");
+    req.session.save(err =>{
+      if(err) next(err);
+      res.redirect("/registration");
+    });
   }
  })
 
@@ -36,48 +44,82 @@ router.post('/registration', (req, res, next) => {
     }else{
       res.redirect('/registration')
     }
- })
-
-
-
-
- 
+ }) 
  .then(([results, fields]) => {
   if(results && results.affectedRows){
-    res.redirect('login');
+    req.flash("success", "User account made!");
+    req.session.save((err) => {
+      if(err) next(err);
+      res.redirect("/login");
+    })
   }else{
-    res.redirect('/registration');
+    req.flash("error", "User could not be made");
+      req.session.save(err =>{
+        if(err) next(err);
+        res.redirect("/registration");
+      });
   }
  })
  .catch((err) => next(err));
 });
 
 
-router.post('/login', (req, res, next) => {
-  let{username, password} = req.body;
+router.post("/login", (req, res, next) => {
+  const {username, password} = req.body;
+  console.log(req.body);
+  let loggedUserId;
+  let loggedUsername;
 
-  db.query('SELECT id, username, password FROM users WHERE username=?', [username])
+  db.query("SELECT id, username, password FROM users WHERE username=?", [username])
   .then(([results, fields]) => {
+    console.log(results);
+    if(results && results.length == 1){
     let dbPassword = results[0].password;
-    if(results && results.length == 1){
+    loggedUserId = results[0].id;
+    loggedUsername = results[0].username;
+    return bcrypt.compare(password, dbPassword);
     }else{
-      res.redirect('/login');
+      req.flash("error", "Invalid username/password combination");
+      req.session.save(err =>{
+        if(err) next(err);
+        res.redirect("/login");
+      });
+    }
+  }).then((passwordMatch) => {
+    if(passwordMatch){
+      req.session.username = loggedUsername;
+      req.session.userId = loggedUserId;
+      req.flash("success", "You are now logged in");
+      req.session.save((err) => {
+        res.redirect('/');
+      })
+    }else{
+      req.flash("error", "Invalid username/password combination");
+      req.session.save(err =>{
+        if(err) next(err);
+        res.redirect("/login");
+      });
+     // res.redirect('/login');
     }
   })
+});
 
-  .then((passwordMatch) => {
-    if(results && results.length == 1){
-      req.session.username = results[0].username;
-      req.session.userId = results[0].id;
-      res.redirect('/');
+router.post("/logout", (req, res, next) => {
+  req.session.destroy((err) =>{
+    if(err){
+      next(err);
     }else{
-      res.redirect('/login');
+      res.json({
+        status: "ok",
+        code: 200,
+        message: "Session was destroyed",
+      });
     }
-  })
-})
+  });
+});
 
 
-router.post('/logout', (req, res, next) => {
+/*router.post('/logout', (req, res, next) => {
   req.session.destroy((err) => {
     if(err){
       errorPrint('session could not be destroy.');
@@ -88,5 +130,5 @@ router.post('/logout', (req, res, next) => {
       res.json({status: "ok", message: "user is logged out"});
       }
   })
-});
+});*/
 module.exports = router;

@@ -14,8 +14,9 @@
            <li><a href="/login">Login</a></li>
            {{/if}}
         </ul>
-
-        <input type="search-text" id="search-text" name="search-text" placeholder="search">
+        <form id="search-bar" method="GET" action="/posts/search" enctype="application/x-www-form-urlencoded">
+        <input type="search-text" id="search-text" name="searchtext" placeholder="search">
         <button id="search-btn">Search</button>
+        </form>
     </nav>
 </head>
